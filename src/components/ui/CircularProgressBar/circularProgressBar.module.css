@@ -1,0 +1,16 @@
+.progressBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 150px;
+  border-radius: 80%;
+  background: 
+    radial-gradient(closest-side, rgb(31 41 55) 79%, transparent 80% 100%),
+    conic-gradient(rgb(251 191 36) 100%, rgb(119, 144, 180) 0);    
+}
+
+.progressBar::before {
+  content: "";
+}
