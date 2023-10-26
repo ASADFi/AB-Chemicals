@@ -2,15 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 150px;
-  height: 150px;
-  border-radius: 80%;
-  background: 
-    radial-gradient(closest-side, rgb(31 41 55) 79%, transparent 80% 100%),
-    conic-gradient(rgb(251 191 36) 100%, rgb(119, 144, 180) 0);    
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  margin: auto;
+  position: relative;
+  background: conic-gradient(rgb(251, 191, 36) var(--progress), #252525 0deg)
 }
-
-.progressBar::before {
-  content: "";
+.progressBar::after {
+  content: attr(data-progress);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: rgb(31, 41, 55);
+  font-size: 1rem;
+  text-align: center;
 }

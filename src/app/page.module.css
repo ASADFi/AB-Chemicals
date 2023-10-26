@@ -257,7 +257,7 @@
 
   .logo,
   .thirteen img {
-    /* filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70); */
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 
@@ -273,7 +273,7 @@
 .box {
  position: relative;
  width: 500px;
- height: 500px;
+ height: calc(100vh - 80px);
  display: flex;
  justify-content: center;
  align-items: center;
@@ -286,11 +286,11 @@
   content: "";
   /* position: absolute; */
   width: 200px;
-  height: 180%;
+  height: 200%;
   background-color:  rgb(251 191 36);
   box-shadow: 0 0 0 rgb(8,8,8);
   border-radius: 10px;
-  animation: animate 7s linear infinite;
+  /* animation: animate 7s linear infinite; */
 }
 
 .box:after {

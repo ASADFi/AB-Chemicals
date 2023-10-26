@@ -29,6 +29,14 @@
       {
         "aria-roles": "off"
       }
+    ],
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter"
+        ]
+      }
     ]
   }
 }

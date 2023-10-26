@@ -1,0 +1,12 @@
+.label{
+    position: relative;
+}
+.label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 30px;
+    height: 1px;
+    background: #777;
+}
