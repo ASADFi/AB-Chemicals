@@ -5,7 +5,6 @@ import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { ABChamicalsProfileData } from "@/info/userInfo";
 
 
 
@@ -44,7 +43,7 @@ export default function Page() {
                     >
                       <Image
                         alt="Profile Pic"
-                        src={ABChamicalsProfileData.profilePic}
+                        src="/public/asadphoto.png"
                         width={0}
                         height={0}
                         sizes="100vw"
@@ -61,7 +60,7 @@ export default function Page() {
                   <div className="rounded-full h-56 w-56 border-4 border-[#252525] mx-auto overflow-hidden">
                     <Image
                       alt="Profile Pic"
-                      src={ABChamicalsProfileData.profilePic}
+                      src="/public/asadphoto.png"
                       width={0}
                       height={0}
                       sizes="100vw"
@@ -164,13 +163,12 @@ export default function Page() {
           </div>
 
           <div className="flex mt-8">
-            <Link href="gallery">
-              <div className="flex justify-center  rounded-full w-12 h-12 transition ease-in-out delay-150 text-[#000000] hover:text-black bg-teal-300 hover:justify-between hover:w-auto items-center gap-8  px-3 hover:px-5  hover:scale-110 hover:bg-teal-300 duration-300 group">
-                <p className="hidden group-hover:flex text-lg font-bold">
-                  Gallery
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-gallery-vertical"><path d="M3 2h18" /><rect width="18" height="12" x="3" y="6" rx="2" /><path d="M3 22h18" /></svg>
-              </div></Link>
+            <Link href="gallery"><div className="flex justify-center  rounded-full w-12 h-12 transition ease-in-out delay-150 text-[#000000] hover:text-black bg-teal-300 hover:justify-between hover:w-auto items-center gap-8  px-3 hover:px-5  hover:scale-110 hover:bg-teal-300 duration-300 group">
+              <p className="hidden group-hover:flex text-lg font-bold">
+                Gallery
+              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-gallery-vertical"><path d="M3 2h18" /><rect width="18" height="12" x="3" y="6" rx="2" /><path d="M3 22h18" /></svg>
+            </div></Link>
 
 
 

@@ -1,114 +1,86 @@
-"use client"
-
+"use client";
 import { AnnimationPage } from "@/components/annimation";
-import Image from "next/image";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import styles from "./page.module.css";
-import Link from "next/link";
-import { ABChamicalsProfileData } from "@/info/userInfo";
 
+import { ABChamicalsProfileData } from "@/info/userInfo";
+import Image from "next/image";
+import Link from "next/link";
 
 
 
 export default function Page() {
 
-
   return (
+    <div>
+      {/* Main UI */}
+      <div className="min-h-screen min-w-screen bg-gray-800	">
+        <title>
+          AB Chemicals |Gallery
+        </title>
+        <section className="">
+          <div className="h-40 flex justify-center items-center relative text-center">
 
-    <>
-      <title>AB Chemicals | Home</title>
-      <main className="flex min-h-screen flex-col ">
-
-        <div>
-
-          <div className="min-h-full min-w-full bg-gray-800	overflow-hidden	absolute ">
-            <div className="min-h-screen w-1/5 scale-150 -rotate-12 -translate-x-20 translate-y- bg-teal-300	"></div>
+            <p className="absolute flex">
+              <span className="text-4xl sm:text-5xl text-white font-extrabold">
+                AB &nbsp;
+                <span className="text-teal-500 font-extrabold ">
+                  Gallery
+                </span>
+              </span>
+            </p>
           </div>
-
           <AnnimationPage>
-            <div className="absolute">
-              <div className="flex flex-col justify-center items-center lg:flex-row lg:justify-evenly w-screen h-vh-72 lg:h-screen p-5 md:p-10 gap-10 lg:gap-8">
-                <div className="hidden lg:block h-full">
-                  <div
-                    className={styles.box}
+            <div className="w-100 py-5 px-10 text-center ">
+              <h1 className="text-2xl md:text-5xl font-semibold">Our Produces</h1>
+            </div>
+          </AnnimationPage>
+        </section>
 
-                  >
-                    <div
-                      style={{
-                        width: "98%",
-                        height: "98%",
-                        position: "absolute",
-                        borderRadius: "10px",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <Image
-                        alt="Profile Pic"
-                        src={ABChamicalsProfileData.profilePic}
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="w-full h-full"
-                        style={{ objectFit: "cover" }}
+        <section>
+          <AnnimationPage>
 
-
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="block lg:hidden">
-                  <div className="rounded-full h-56 w-56 border-4 border-[#252525] mx-auto overflow-hidden">
-                    <Image
-                      alt="Profile Pic"
-                      src={ABChamicalsProfileData.profilePic}
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="w-full h-full"
-                      style={{ objectFit: "cover" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="container w-auto px-5 flex flex-col justify-center gap-6 text-center lg:text-left">
-                  <div className="flex gap-5">
-                    <HiOutlineArrowNarrowRight className="h-12 w-12 hidden lg:block mt-0.5 shrink-0" />
-                    <div className="w-full lg:w-auto">
-                      <h1
-                        className="three-d w-full pt-0.5 decoration-8 mb-2 text-teal-300 dark:text-light-gold subpixel-antialiased text-3xl md:text-5xl font-bold uppercase justify-self-stretch">
-                        Welcome TO AB Chemicals
-                      </h1>
-                      <h1 className="w-full pt-0.5 space-y-5 text-white dark:text-light-gold subpixel-antialiased text-xl md:text-3xl font-bold uppercase">
-                        Trusted source for chemicals and raw materials.
-                      </h1>
-                    </div>
-                  </div>
-                  <p className="text-md md:text-lg md:leading-loose ">
-                    <a className="font-bold text-teal-300">AB Chemicals </a> Your trusted source for chemicals and raw materials. With years of experience, we deliver quality solutions for diverse industries. Our extensive portfolio includes specialty chemicals, raw materials, and custom sourcing to meet unique needs. Quality assurance is our priority, ensuring industry standards are met. We offer reliability and a global reach, making us your partner of choice for essential supplies. Explore the potential of innovation with us across various sectors.
-                  </p>
-                  <div className="pt-7 flex justify-center lg:justify-start gap-5">
-                    <button className="rounded-full">
-                      <a
-
-                        className="relative bg-teal-300 rounded-full overflow-hidden  text-white font-bold border border-teal-300 bg-transparent text-center px-16 py-4 group "
+            <div className="container mx-auto px-5 md:px-10 lg:px-20 pb-36 md:pb-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-7">
+                {ABChamicalsProfileData.portfolioInfo.map((obj) => {
+                  return (
+                    <>
+                      <div
+                        className="border-slate-800 cursor-pointer p-4 border-2 rounded-2xl"
+                        style={{
+                          background: obj.hexColor,
+                        }}
                       >
-                        <span className="stroke-white px-7 py-3.5 absolute w-0 group-hover:w-full translate-all ease-out duration-700 h-full bg-teal-300 left-0 top-0 rounded-full">
-                          <svg className="w-6 h-6 font-extrabold bg-transparent -mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                          </svg>
-                        </span>
-                        <span className="relative text-justify justify-normal text-black">MORE ABOUT ME</span>
-                      </a>
-                    </button>
-                  </div>
-                </div>
+                        <div
+                          style={{
+                            width: "100%",
+                            height: "85%",
+                            borderRadius: "10px",
+                            overflow: "hidden",
+                          }}
+                        >
+                          <Image
+                            alt="Google Pic"
+                            src={obj.bannerImage}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full	h-full"
+                          />
+                        </div>
+                        <div className="text-center text-white font-semibold capitalize text-xl py-2">
+                          {obj.heading}
+                        </div>
+                        <div>{obj.subHeading}</div>
+                      </div>
+                    </>
+                  );
+                })}
               </div>
             </div>
           </AnnimationPage>
-        </div>
-      </main>
+        </section>
+      </div>
 
+      {/* Navigation Component */}
       <section className="hidden lg:flex absolute top-0 right-0 min-h-screen justify-center items-center pr-5">
         <div className="flex flex-col py-6 items-end">
           <div className="flex">
@@ -203,6 +175,7 @@ export default function Page() {
         </div>
       </section>
 
+
       <section className="fixed lg:hidden bottom-0 left-0 bg-white w-full py-3">
         <div className="flex justify-evenly">
 
@@ -284,6 +257,6 @@ export default function Page() {
 
         </div>
       </section>
-    </>
+    </div>
   );
 }

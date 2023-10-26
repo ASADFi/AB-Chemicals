@@ -9,7 +9,7 @@ interface ContainerProps {
 const ExperienceCard : React.FC<ContainerProps> = ({ count, label }) => {
     return (
         <div className="about-card border-2 border-slate-400 rounded-md p-5">
-            <div className="flex text-amber-400">
+            <div className="flex text-teal-600">
                 <p className="text-5xl font-extrabold mx-4">
                     {count}
                 </p>
