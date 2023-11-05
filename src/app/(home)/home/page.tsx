@@ -5,6 +5,7 @@ import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { ABChamicalsProfileData } from "@/info/userInfo";
 
 
 
@@ -41,32 +42,31 @@ export default function Page() {
                         overflow: "hidden",
                       }}
                     >
+                     
                       <Image
-                        alt="Profile Pic"
-                        src="/public/asadphoto.png"
-                        width={0}
-                        height={0}
-                        sizes="100vw"
-                        className="w-full h-full"
-                        style={{ objectFit: "cover" }}
-
-
-                      />
+                            alt="Google Pic"
+                            src={ABChamicalsProfileData.profilePic}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full	h-full"
+                            style={{ objectFit: "cover" }}
+                          />
                     </div>
                   </div>
                 </div>
 
                 <div className="block lg:hidden">
                   <div className="rounded-full h-56 w-56 border-4 border-[#252525] mx-auto overflow-hidden">
-                    <Image
-                      alt="Profile Pic"
-                      src="/public/asadphoto.png"
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      className="w-full h-full"
-                      style={{ objectFit: "cover" }}
-                    />
+                  <Image
+                            alt="Google Pic"
+                            src={ABChamicalsProfileData.profilePic}
+                            width={0}
+                            height={0}
+                            sizes="100vw"
+                            className="w-full	h-full"
+                            style={{ objectFit: "cover" }}
+                          />
                   </div>
                 </div>
 
@@ -87,10 +87,10 @@ export default function Page() {
                     <a className="font-bold text-teal-300">AB Chemicals </a> Your trusted source for chemicals and raw materials. With years of experience, we deliver quality solutions for diverse industries. Our extensive portfolio includes specialty chemicals, raw materials, and custom sourcing to meet unique needs. Quality assurance is our priority, ensuring industry standards are met. We offer reliability and a global reach, making us your partner of choice for essential supplies. Explore the potential of innovation with us across various sectors.
                   </p>
                   <div className="pt-7 flex justify-center lg:justify-start gap-5">
-                    <button className="rounded-full">
-                      <a
 
-                        className="relative bg-teal-300 rounded-full overflow-hidden  text-white font-bold border border-teal-300 bg-transparent text-center px-16 py-4 group "
+                    <button className="rounded-full">
+                      <a href="about"
+                    className="relative bg-teal-300 rounded-full overflow-hidden  text-white font-bold border border-teal-300 bg-transparent text-center px-16 py-4 group "
                       >
                         <span className="stroke-white px-7 py-3.5 absolute w-0 group-hover:w-full translate-all ease-out duration-700 h-full bg-teal-300 left-0 top-0 rounded-full">
                           <svg className="w-6 h-6 font-extrabold bg-transparent -mx-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" >

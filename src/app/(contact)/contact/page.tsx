@@ -1,5 +1,5 @@
 'use client';
-
+// import Map from "@/components/Map";
 import { ABChamicalsProfileData } from "@/info/userInfo";
 import { MailOpen, Map, Phone } from "lucide-react";
 import Link from "next/link";
@@ -7,16 +7,9 @@ import { useSearchParams } from 'next/navigation';
 
 import { useEffect, useState } from "react";
 import { FaPaperPlane } from "react-icons/fa6";
-import { BsGithub, BsLinkedin, BsStackOverflow } from "react-icons/bs";
 import PuffLoader from 'react-spinners/PuffLoader';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-
-
-
-
-
 export default function Page() {
 
 
@@ -343,6 +336,10 @@ export default function Page() {
                       </button>
                       <ToastContainer />
                     </form>
+
+                    {/* <Map address="1600 Amphitheatre Parkway, Mountain View, CA" /> */}
+
+
                   </div>
                 </div>
               </section>
